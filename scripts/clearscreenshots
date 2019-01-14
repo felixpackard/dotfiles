@@ -1,0 +1,10 @@
+#!/bin/bash
+
+numfiles=$(($(ls -l ~/Pictures/screenshots/ | egrep -c '^-')+0))
+
+if [[ numfiles -eq 0 ]]
+then
+	notify-send "nothing to remove"
+else
+	rm ~/Pictures/screenshots/*.png && notify-send "removed $numfiles file(s)"
+fi

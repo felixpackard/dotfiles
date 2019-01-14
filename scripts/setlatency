@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cardname="bluez_card.2C_41_A1_81_B5_62"
+
+pactl set-card-profile 8 headset_head_unit
+pactl set-card-profile 8 a2dp_sink
+notify-send "audio re-initialized"

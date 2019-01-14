@@ -1,0 +1,6 @@
+rofi.theme:		Pop-Dark-Custom
+rofi.font:		Source Cide Pro for Powerline 15
+rofi.disable-history:	true
+rofi.fullscreen:	true
+rofi.scroll-method:	1
+rofi.show-match:	false

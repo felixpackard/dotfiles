@@ -1,0 +1,3 @@
+curbright=$(expr $(xbacklight -get) | awk '{print sprintf("%.0f",$0/5)*5}')
+
+xbacklight -set $((curbright + 5)) -steps 1 -time 0

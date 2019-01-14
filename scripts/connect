@@ -1,0 +1,8 @@
+#!/bin/bash
+
+printf "[Bose QC35 II Autoconnect Script]\nWritten by deadpixl\n\n"
+read -s -p "[sudo] password for $USER: " sudoPW
+printf "\nconnecting..."
+export DISPLAY=:0.0
+echo $sudoPW | sudo -S /home/deadpixl/scripts/autoconnect &>/dev/null && echo "connected!"
+read -n 1 -s -r -p "Press any key to continue..."

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+curbright=$(expr $(xbacklight -get) | awk '{print sprintf("%.0f",$0/5)*5}')
+
+echo "$curbright" > ~/.lastbri
+/bin/sh ~/scripts/lockscript 
