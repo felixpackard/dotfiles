@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+
+import i3ipc
+import os
+
+i3 = i3ipc.Connection()
+
+def on(i3, e):
+    focused = i3.get_tree().find_focused()
+    if focused.type == 'workspace':
+        os.system("feh --bg-fill /usr/share/backgrounds/levi-saunders-71726-unsplash.jpg")
+    else:
+        os.system("feh --bg-fill /usr/share/backgrounds/trees-blurred-nodark.jpg")
+
+# Subscribe to events
+i3.on('window::new', on)
+i3.on('window::close', on)
+i3.on('workspace::focus', on)
+
+# Start the main loop and wait for events to come in.
+i3.main()
