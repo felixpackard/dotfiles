@@ -1,7 +1,0 @@
-#!/bin/bash
-
-xbacklight -set $(cat ~/.lastbri)
-
-sudo ifconfig wlp3s0 down && sudo ifconfig wlp3s0 up
-
-exit 0
